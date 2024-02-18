@@ -1,0 +1,10 @@
+
+  body{
+    background-image: url("Desktop\ -\ 13.png");
+  }
+  #soundBox {
+    margin-top: 280px;
+    width: 100px; /* szerokość kwadratu */
+    height: 100px; /* wysokość kwadratu */
+    cursor: pointer; /* zmienia kursor na wskaźnik */
+  }
