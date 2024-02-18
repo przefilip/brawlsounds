@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+      
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill Split Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+<div id="app">
+  <div id="welcomeScreen">
+    <div class="welcome-message">Welcome to bill split!</div>
+    <div class="subtext">There you can calculate how much money you should pay and add a tip if you want, you can use it for example when you are with your friend in a restaurant.</div>
+    <img src="Group 49.png" width="500px"> <br><br><br> <br><br><br><br>
+    <button class="start-button" onclick="showScreen('billAmountScreen')">Get started</button>
+  </div>
+
+  <div id="billAmountScreen" class="screen-hidden">
+    <div class="welcome-message">How much is your bill?</div>
+    <input type="number" id="billAmount" placeholder="Enter bill amount" /> <br><br><br><br><br><br>
+    <button class="start-button" onclick="showScreen('tipScreen')">Next</button>
+  </div>
+
+  <div id="tipScreen" class="screen-hidden">
+    <div class="welcome-message">What's your tip? (optional)</div>
+    <input type="range" id="tipPercentage" min="0" max="100" value="0" />
+    <div id="tipValue">0%</div> <br><br><br><br><br><br>
+    <button class="start-button" onclick="showScreen('splitScreen')">Next</button>
+    <button class="skip-button" onclick="skipTip()">Skip</button>
+  </div>
+
+  <div id="splitScreen" class="screen-hidden">
+    <div class="welcome-message">How many persons are splitting the bill?</div>
+    <input type="number" id="splitCount" placeholder="Enter number of persons" /> <br><br><br><br><br><br>
+    <button class="start-button" onclick="showFinalAmount()">Next</button>
+  </div>
+
+  <div id="finalScreen" class="screen-hidden">
+    <div class="welcome-message">Each person should pay:</div>
+    <div id="finalAmount" class="subtext"></div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
